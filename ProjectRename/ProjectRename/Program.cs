@@ -31,11 +31,7 @@ namespace ProjectRename
                         DirectoryInfo destDir = new DirectoryInfo(Path.GetDirectoryName(destinationFile));
                         destDir.Create();
                     }
-                 
-                    //  new FileInfo(f).CopyTo(destinationFile);
                     System.IO.File.Copy(f, destinationFile,true);
-
-
                     if (replaceableFile.Any(x => destinationFile.EndsWith(x)))
                     {
                         string str = File.ReadAllText(destinationFile);
