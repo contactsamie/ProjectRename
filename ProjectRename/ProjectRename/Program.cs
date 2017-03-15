@@ -13,6 +13,10 @@ namespace ProjectRename
         {
             var replaceableFile=new List<string>() {".cs",".csproj",".sln",".fsx",".bat",".md",".txt",".nuspec"};
 
+            const string sourceDir = @"D:\source";
+            const string find = "namesomething";
+            const string secondFind = "name";
+            const string replace = "replacement";
             var directories = DirSearch(sourceDir);
            
             foreach (var directory in directories)
